@@ -1,6 +1,4 @@
 ﻿// For more information see https://aka.ms/fsharp-console-apps
-printfn "Hello from F#"
-
 open System
 
 type 't btree =
@@ -22,7 +20,7 @@ let CTree () =
             | Nil -> ()
         tr t 0
 
-    let spaces n = List.fold (fun s _ -> s+"  ") "" [0..n]
+    let spaces n = List.fold (fun s _ -> s+"    ") "" [0..n]
     let print_tree T = iterh infix (fun x h -> printfn "%s%A" (spaces h) x) T
 
     /// вставка элемента в дерево
